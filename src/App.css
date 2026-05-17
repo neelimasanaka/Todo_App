@@ -1,0 +1,172 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+}
+
+.container {
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  background: linear-gradient(
+    to right,
+    #667eea,
+    #764ba2
+  );
+
+  padding: 20px;
+}
+
+.todo-card {
+  width: 100%;
+  max-width: 500px;
+
+  background: white;
+
+  padding: 25px;
+
+  border-radius: 20px;
+
+  box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+}
+.heading {
+  text-align: center;
+  font-size: 34px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.input-section {
+  display: flex;
+  gap: 10px;
+
+  margin-bottom: 20px;
+}
+
+.todo-input {
+  flex: 1;
+
+  padding: 12px;
+
+  border: 1px solid #ccc;
+  border-radius: 10px;
+
+  outline: none;
+
+  font-size: 16px;
+}
+
+.add-btn {
+  padding: 12px 18px;
+
+  border: none;
+  border-radius: 10px;
+
+  background: #667eea;
+  color: white;
+
+  cursor: pointer;
+
+  font-weight: bold;
+}
+
+.empty-text {
+  text-align: center;
+  color: gray;
+}
+
+.todo-item {
+  background: #f5f7ff;
+
+  padding: 15px;
+
+  border-radius: 12px;
+
+  margin-bottom: 12px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  box-shadow: 0 3px 10px rgba(0,0,0,0.08);
+}
+
+.left-section {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+
+  flex: 1;
+}
+
+.todo-text {
+  font-size: 16px;
+  color: #333;
+
+  word-break: break-word;
+}
+
+.completed {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+.btn-group {
+  display: flex;
+  gap: 8px;
+}
+
+.edit-btn {
+  padding: 8px 12px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: orange;
+  color: white;
+
+  cursor: pointer;
+}
+
+.delete-btn {
+  padding: 8px 12px;
+
+  border: none;
+  border-radius: 8px;
+
+  background: crimson;
+  color: white;
+
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+
+  .input-section {
+    flex-direction: column;
+  }
+
+  .add-btn {
+    width: 100%;
+  }
+
+  .todo-item {
+    flex-direction: column;
+    align-items: flex-start;
+
+    gap: 12px;
+  }
+
+  .btn-group {
+    width: 100%;
+    justify-content: flex-end;
+  }
+}
